@@ -1,0 +1,61 @@
+<div class="main-outer-dashboard">
+  <div class="main-card">
+    <div class="left-slider"
+         [style]="{'width': '' + sliderLeftDivWidth + '', 'border-radius': ''+sliderLeftDivBorderRadius+''}"
+         data-aos-once="true" data-aos-duration="1000" data-aos="zoom-in">
+      <div class="left-slider-top">
+        <div class="image-logo" (click)="openLeftSlider()" [style]="{'height': ''+sliderImageLogoChangeHeight+''}">
+          <img src="{{sliderImageLogoChange}}" alt="">
+        </div>
+        <div class="profile">
+          <div class="profile-avatar" [style]="{'padding': ''+sliderImageProfileAvatarPadding+''}">
+            <img src="../../../assets/images/dashboard/leftSlider/profile/profileAvatar.webp" alt=""
+                 [style]="{'height': ''+sliderImageProfileAvatarChange+'','width': ''+sliderImageProfileAvatarChange+''}">
+          </div>
+          <p *ngIf="sliderLeftDiv">Welcome Back !</p>
+          <h1 *ngIf="sliderLeftDiv">Enoke Deelaka</h1>
+        </div>
+        <div class="navs">
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('ToDashboard')">
+            <mat-icon>dashboard</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Dashboard</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('ManageLocations')">
+            <mat-icon>location_on</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Locations</h1>
+          </div>
+        </div>
+      </div>
+      <div class="left-slider-bottom">
+        <div class="navs">
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('Manage-settings')">
+            <mat-icon>settings</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Settings</h1>
+          </div>
+          <div (click)="onLogOut()" class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}">
+            <mat-icon>logout</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Log Out</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle-section" [style]="{'width': '' + middleSectionWidth + ''}" data-aos-once="true"
+         data-aos-duration="1000" data-aos="zoom-in">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="rightSectionHideCheck" class="right-section" [style]="{'width': '' + rightSectionWidth + ''}"
+         data-aos-once="true" data-aos-duration="1000" data-aos="zoom-in">
+      <div class="right-section-top">
+        <app-operator-dashboard-summary></app-operator-dashboard-summary>
+      </div>
+      <div class="right-section-bottom">
+        <app-activity-feed-dashboard-summary></app-activity-feed-dashboard-summary>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<p>dashboard works!</p>-->
+<!--<button (click)="onLogOut()">Log Out</button>-->

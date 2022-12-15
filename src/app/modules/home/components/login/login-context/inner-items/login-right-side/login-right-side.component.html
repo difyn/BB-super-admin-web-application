@@ -1,0 +1,38 @@
+<div class="main-outer">
+  <div class="alert alert-danger" *ngIf="error">
+    <p>{{error}}</p>
+  </div>
+  <div class="loading-outer" *ngIf="isLoading">
+    <app-loading-spinner-custom></app-loading-spinner-custom>
+  </div>
+  <form [formGroup]="loginForm" *ngIf="!isLoading">
+    <div class="body">
+      <h1>Login</h1>
+      <p>Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
+        <br>a consectetur adipisicing.</p>
+      <div class="form-field">
+        <span>Username</span>
+        <mat-form-field class="mat-form-field-class" appearance="outline">
+          <input formControlName="email" matInput placeholder="">
+        </mat-form-field>
+      </div>
+      <div class="form-field">
+        <span>Password</span>
+        <mat-form-field class="mat-form-field-class" appearance="outline">
+          <input formControlName="password" type="password" matInput placeholder="" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <a href="">Forgot Password ?</a>
+      <div class="login-button">
+        <button [disabled]="loginForm.invalid" (click)="submitLoginData()" mat-flat-button color="primary">Log In
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

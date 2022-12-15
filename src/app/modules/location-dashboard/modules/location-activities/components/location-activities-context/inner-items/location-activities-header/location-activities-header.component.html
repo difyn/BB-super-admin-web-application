@@ -1,0 +1,32 @@
+<div class="manage-location-header-main-outer">
+  <div class="row rows">
+    <div class="col cols">
+      <div class="location-activities-header">
+        <div class="row rows">
+          <div class="col cols">
+            <div class="location-activities-header-left">
+              <h1>Manage Activity</h1>
+              <div>
+                <mat-icon>location_on</mat-icon>
+                <p>Global Village, Dubai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col cols">
+      <div class="manage-location-header-right">
+        <mat-form-field class="mat-form-field-input" appearance="outline">
+          <input [matAutocomplete]="auto" matInput placeholder="Search for any Activity..">
+          <mat-icon (click)="searchingProduct()" matSuffix>search</mat-icon>
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>

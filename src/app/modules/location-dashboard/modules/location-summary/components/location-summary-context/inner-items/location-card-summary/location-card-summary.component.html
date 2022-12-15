@@ -1,0 +1,114 @@
+<div class="main-outer-dashboard-summary">
+  <div class="dashboard-summary-header">
+    <div class="row rows">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 cols">
+        <div class="location-activities-header-left">
+          <h1>Summary</h1>
+          <div>
+            <mat-icon>location_on</mat-icon>
+            <p>Global Village, Dubai</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8 cols">
+        <div class="dashboard-summary-header-right">
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input [matAutocomplete]="auto" formControlName="searching" matInput placeholder="Search..">
+            <mat-icon (click)="searchingProduct()" matSuffix>search</mat-icon>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-summary-body">
+<!--    <div class="filter-section">-->
+<!--      <div class="row rows">-->
+<!--        <div class="col cols">-->
+<!--          <div class="calender-section">-->
+<!--            <mat-form-field class="mat-select-form-field" appearance="outline">-->
+<!--              <mat-label>Calender</mat-label>-->
+<!--              <input matInput [matDatepicker]="picker">-->
+<!--              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--              <mat-datepicker #picker></mat-datepicker>-->
+<!--            </mat-form-field>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col cols">-->
+<!--          <div class="location-section">-->
+<!--            <mat-form-field class="mat-select-form-field" appearance="outline">-->
+<!--              <mat-label>Select Location</mat-label>-->
+<!--              <mat-select>-->
+<!--                <mat-option *ngFor="let food of foods" [value]="food.value">-->
+<!--                  {{food.viewValue}}-->
+<!--                </mat-option>-->
+<!--              </mat-select>-->
+<!--            </mat-form-field>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="summary-cards">
+      <div class="row rows">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
+          <div class="cards-outer-1">
+            <div class="card-items card-items-1">
+              <div class="content-inner-card-top">
+                <div>
+                  <mat-icon>airplane_ticket</mat-icon>
+                  <h1>Total Tickets <br/> Sold</h1>
+                </div>
+              </div>
+              <div class="content-inner-card-middle">
+                <h1>4255</h1>
+              </div>
+              <div class="content-inner-card-bottom">
+                <mat-icon>payments</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
+          <div class="cards-outer-2">
+            <div class="card-items card-items-2">
+              <div class="content-inner-card-top">
+                <div>
+                  <mat-icon>directions_run</mat-icon>
+                  <h1>Total Rides</h1>
+                </div>
+              </div>
+              <div class="content-inner-card-middle">
+                <h1>4255</h1>
+              </div>
+              <div class="content-inner-card-bottom">
+                <mat-icon>insights</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
+          <div class="cards-outer-3">
+            <div class="card-items card-items-3">
+              <div class="content-inner-card-top">
+                <div>
+                  <mat-icon>receipt_long</mat-icon>
+                  <h1>Total Revenue</h1>
+                </div>
+              </div>
+              <div class="content-inner-card-middle">
+                <h1>4255</h1>
+              </div>
+              <div class="content-inner-card-bottom">
+                <mat-icon>ssid_chart</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

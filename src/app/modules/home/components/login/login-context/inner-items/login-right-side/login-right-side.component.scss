@@ -1,0 +1,102 @@
+.main-outer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-outer {
+  position: fixed;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 380px;
+
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px;
+    letter-spacing: 1px;
+    color: #545454;
+    margin: 0 0 30px 0;
+  }
+
+  p {
+    color: #B7B7B7;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.login-button {
+  width: 100%;
+
+  button {
+    width: 100%;
+    background-color: #367BF6;
+    margin: 35px 0 0 0;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0 0 0;
+
+  span {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .mat-form-field-class {
+    margin-top: 5px;
+    width: 100%;
+
+    ::ng-deep .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+  }
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .body {
+    h1 {
+      font-size: 35px;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+    }
+  }
+}

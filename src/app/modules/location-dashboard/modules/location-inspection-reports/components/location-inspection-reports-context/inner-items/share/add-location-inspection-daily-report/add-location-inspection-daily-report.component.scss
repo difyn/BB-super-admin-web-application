@@ -1,0 +1,309 @@
+.main-outer-report-monthly {
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+  //overflow-x: auto;
+  //white-space: nowrap;
+}
+
+.report-header {
+  h1 {
+    color: #00B302;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  p {
+    color: #8F8F8F;
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 1.5px;
+  }
+}
+
+.calender-section {
+  margin: 30px 0 0 0;
+
+  ::ng-deep .mat-form-field-infix {
+    display: flex;
+    padding: 0 0 0 0 !important;
+    border-top: 0px solid rgba(0, 0, 0, 0);
+  }
+
+  ::ng-deep {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: black;
+      font-weight: 500;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+      padding: 0 0.75em 0 0.75em;
+      margin-top: 0;
+      position: relative;
+    }
+
+    .mat-select-form-field {
+      .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        margin: 1px 0 0 0;
+      }
+    }
+
+    .mat-form-field-wrapper {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ::ng-deep .mat-icon {
+    vertical-align: middle;
+    margin: 4px 0 0 0 !important;
+  }
+}
+
+.report-body {
+  margin: 20px 0 0 0;
+
+  .all-locations-table {
+    //border: 1px solid red;
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+
+    .mat-header-cell {
+      padding: 20px 20px 20px 20px;
+      color: white;
+      background-color: #7F7F7F;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+    }
+
+    .mat-row:hover .mat-cell {
+      background-color: #1C95D5;
+      cursor: pointer;
+      color: white;
+    }
+
+    .mat-header-row {
+      width: fit-content !important;
+    }
+
+    .mat-row {
+      width: fit-content !important;
+      background-color: #F8F7F1;
+    }
+
+    .mat-cell {
+      padding: 5px 20px 5px 20px;
+    }
+  }
+
+  .all-locations-table::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .all-locations-table::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #dbdbdb;
+  }
+
+  .all-locations-table::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: #ffffff;
+  }
+
+  .all-location-table-view {
+    margin: 0 5px 0 0;
+    padding: 0;
+    background-color: #FFC107;
+
+    mat-icon {
+      transform: scale(0.8);
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .all-location-table-edit {
+    padding: 0;
+    background-color: #FF5163;
+
+    mat-icon {
+      transform: scale(0.8);
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.example-section {
+  //display: flex;
+  //align-content: center;
+  //align-items: center;
+  //height: 60px;
+}
+
+.inspection-monthly-reports-field {
+  .mat-form-field-input {
+    width: 100%;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #777777;
+      opacity: 1; /* Firefox */
+    }
+
+    input {
+      padding: 0 0 5px 10px;
+    }
+
+    input:hover {
+      color: black;
+    }
+
+    mat-icon {
+      margin: 0 0 0 0;
+      color: #202020;
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+  }
+
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 5px 0 0 5px !important;
+    min-width: 28px !important;
+    background-color: white;
+  }
+
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 5px 5px 0 !important;
+    background-color: white;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0.75em 0 0.75em;
+    margin: 0;
+  }
+
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+    padding: 7px 20px 7px 0 !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #e0e0e0;
+    font-weight: 500;
+  }
+}
+
+.rows {
+  margin: 0;
+}
+
+.MatFormField-Section {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 0;
+
+  p {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .mat-form-field-input {
+    width: 100%;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #777777;
+      opacity: 1; /* Firefox */
+    }
+
+    input {
+      padding: 0 0 5px 10px;
+    }
+
+    mat-icon {
+      margin: 0 0 0 0;
+      color: #202020;
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+  }
+
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 5px 0 0 5px !important;
+    min-width: 28px !important;
+    background-color: white;
+  }
+
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 5px 5px 0 !important;
+    background-color: white;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0.75em 0 0.75em;
+    margin: 0;
+  }
+
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+    padding: 7px 20px 7px 0 !important;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #e0e0e0;
+    font-weight: 500;
+  }
+}
+
+.cols {
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+.report-footer {
+  .button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 30px 0 0 0;
+
+    .close-button {
+      background-color: #595959;
+      padding: 0 35px 0 35px;
+    }
+
+    .clear-button {
+      background-color: #FF5163;
+      padding: 0 35px 0 35px;
+      margin: 0 0 0 5px;
+    }
+
+    .add-button {
+      background-color: #1C95D5;
+      padding: 0 35px 0 35px;
+      margin: 0 0 0 5px;
+    }
+  }
+}

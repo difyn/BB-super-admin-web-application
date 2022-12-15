@@ -1,0 +1,53 @@
+<form [formGroup]="manageSettings">
+  <div class="cards">
+    <div class="row rows">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="left-hand-side">
+          <h1>SECURITY</h1>
+          <p>Change your password authentication</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="right-hand-side">
+          <div class="row rows">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-12">
+              <div class="MatFormField-Section">
+                <p>Current Password</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="currentPassword" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-12">
+              <div class="MatFormField-Section">
+                <p>New Password</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="newPassword" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-12">
+              <div class="MatFormField-Section">
+                <p>Confirm New Password</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="confirmNewPassword" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="setting-buttons">
+            <div class="row rows">
+              <div class="col cols-1">
+                <button (click)="resetFormButton()" class="reset-settings" mat-flat-button color="primary">Reset Form
+                </button>
+              </div>
+              <div class="col cols-2">
+                <button class="save-changes-settings" mat-flat-button color="primary">Update Password</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,63 @@
+<div class="main-outer-operator-dashboard-summary">
+  <div class="operator-dashboard-header">
+    <div class="row rows">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+        <h1>Operator Dashboard</h1>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <mat-form-field class="mat-select-form-field" appearance="outline">
+          <mat-label>Select Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-item-left">
+        <p>Anemometer</p>
+      </div>
+      <div class="card-item-right">
+        <div class="battery-cell">
+          <div class="battery-cell-inner" [style]="{'width': '' +batteryCellFill+ '','height': '100%','background-color': ''+batteryCellColor+''}">
+            <p>{{batteryCellFill}}</p>
+          </div>
+        </div>
+        <span>KN</span>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="card-item-left">
+        <p>Load Cell</p>
+      </div>
+      <div class="card-item-right">
+        <div class="battery-cell">
+          <div class="battery-cell-inner" [style]="{'width': '' +batteryCellFill+ '','height': '100%','background-color': ''+batteryCellColor+''}">
+            <p>{{batteryCellFill}}</p>
+          </div>
+        </div>
+        <span>KG</span>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="card-item-left">
+        <p>Helium Min/Max</p>
+      </div>
+      <div class="card-item-right">
+        <span>1940</span>
+      </div>
+    </div>
+    <div class="card-item">
+      <div class="card-item-left">
+        <p>Helium Loss</p>
+      </div>
+      <div class="card-item-right">
+        <span>0/KG Loss</span>
+      </div>
+    </div>
+  </div>
+</div>

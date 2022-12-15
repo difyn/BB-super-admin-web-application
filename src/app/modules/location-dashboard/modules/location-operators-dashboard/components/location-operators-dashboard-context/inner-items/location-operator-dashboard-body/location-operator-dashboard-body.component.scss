@@ -1,0 +1,156 @@
+.operator-dashboard-body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards-outer{
+  width: 100%;
+  //border: 1px solid red;
+  height: 450px;
+}
+.rows{
+  margin: 0;
+  height: 100%;
+}
+.upper-part-cells{
+  height: 60%;
+  //border: 1px solid yellow;
+}
+.lower-part-weather{
+  height: 40%;
+  //border: 1px solid yellow;
+}
+.col-1{
+  //border: 1px solid green;
+}
+.upper-part-cols{
+  //border: 1px solid brown;
+  padding: 5px 5px 5px 5px;
+}
+.cards-upper-inner{
+  height: 100%;
+  background-color: #00B302;
+  border-radius: 5px;
+}
+.card-inner-section-1{
+  height: 33.3%;
+  //border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+  }
+}
+.card-inner-section-2{
+  height: 33.3%;
+  //border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+  }
+}
+.card-inner-section-3{
+  height: 33.3%;
+  //border: 1px solid white;
+}
+.weather-col-1{
+  padding: 10px 0 0 10px;
+  //border: 1px solid black;
+  h1{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  p{
+    color: #8F8F8F;
+    margin: 0 0 5px 0;
+  }
+}
+.weather-col-2{
+  //border: 1px solid black;
+  h1{
+    color: #1C95D5;
+    font-size: 14px;
+    line-height: 18px;
+    text-align:right;
+    margin: 0;
+  }
+}
+.weather-header{
+  margin: 10px 0 0 0;
+  p{
+    padding: 0;
+    line-height: 18px;
+    text-align:right;
+  }
+}
+.top-flight-check{
+  height: 50%;
+  //border: 1px solid white;
+}
+.bottom-previous-check{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+  //border: 1px solid white;
+}
+.top-flight-check-header{
+  padding: 10px 15px 0 15px;
+  h1{
+    color: white;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    line-height: 25px;
+  }
+  div{
+    p{
+      color: #d9d9d9;
+      margin: 0 0 2px 0;
+    }
+  }
+  button{
+    width: 100%;
+    background-color: #2A9CF4;
+    margin: 15px 0 0 0;
+  }
+}
+.bottom-previous-check{
+  padding: 10px 15px 0 15px;
+  h1{
+    color: white;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    line-height: 25px;
+  }
+  div{
+    p{
+      color: #d9d9d9;
+      margin: 0 0 2px 0;
+    }
+  }
+  button{
+    width: 100%;
+    background-color: #2A9CF4;
+    margin: 15px 0 0 0;
+  }
+}
+.card-flights {
+  height: 100%;
+  background-color: #2C2989;
+  border-radius: 0 15px 15px 0;
+  padding: 10px 0 20px 0;
+}

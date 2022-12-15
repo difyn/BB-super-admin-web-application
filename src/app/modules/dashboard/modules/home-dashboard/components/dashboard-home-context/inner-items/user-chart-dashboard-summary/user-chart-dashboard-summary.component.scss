@@ -1,0 +1,88 @@
+.main-outer-user-chart-dashboard {
+  width: 100%;
+  height: 100%;
+}
+
+.left-side-header {
+  h1 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+  }
+
+  p {
+    color: #777777;
+    letter-spacing: 0.8px;
+  }
+}
+
+.user-chart-dashboard-header {
+  height: 20%;
+  //border: 1px solid red;
+}
+
+.user-chart-dashboard-body {
+  height: 80%;
+  //border: 1px solid red;
+}
+
+.location-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  ::ng-deep {
+    .mat-form-field {
+      width: 150px; //enter whatever width you want
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+      padding: 0 0.75em 0 0.75em;
+      margin: 0;
+    }
+
+    .mat-form-field-flex > .mat-form-field-infix {
+      padding: 0.4em 0 !important;
+    }
+
+    .mat-form-field-label-wrapper {
+      top: -1.5em;
+    }
+
+    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+      transform: translateY(-1.1em) scale(.75);
+      width: 133.33333%;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: black;
+      font-weight: 500;
+    }
+
+    .mat-select-form-field {
+      .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    .mat-form-field-wrapper {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+::ng-deep .mat-select-panel {
+  background: #181818 !important;
+}
+
+::ng-deep .mat-option-text {
+  color: white;
+}
+
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+  background: #00B302;
+}

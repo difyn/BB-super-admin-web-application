@@ -1,0 +1,58 @@
+<form [formGroup]="addUserForm">
+  <div class="main-outer-add-users">
+    <h1>Location</h1>
+    <div class="row rows">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Location Name</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="fullName" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Currency</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="email" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="location-section">
+          <p>Balloon Type</p>
+          <mat-form-field class="mat-select-form-field" appearance="outline">
+            <!--          <mat-label>Select Location</mat-label>-->
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="MatFormField-Section">
+          <p>Location Address</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="phoneNumber" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row rows">
+        <div class="col">
+          <div class="button-row">
+            <button (click)="cancelPopupButton()" class="close-button" mat-flat-button color="primary">Close</button>
+            <button (click)="disableEnableForm()" class="unlock-button" mat-flat-button
+                    color="primary">{{disableEnableText}}</button>
+            <button class="clear-button" mat-flat-button color="primary">Delete</button>
+            <button class="add-button" mat-flat-button color="primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+

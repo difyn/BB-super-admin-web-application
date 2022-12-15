@@ -1,0 +1,23 @@
+<div class="manage-location-header-main-outer">
+  <div class="row rows">
+    <div class="col cols">
+      <div class="manage-location-header-left">
+        <h1>Manage Location</h1>
+        <p>Good Morning, Enoke</p>
+      </div>
+    </div>
+    <div class="col cols">
+      <div class="manage-location-header-right">
+        <mat-form-field class="mat-form-field-input" appearance="outline">
+          <input [matAutocomplete]="auto" formControlName="searching" matInput placeholder="Search for any location..">
+          <mat-icon (click)="searchingProduct()" matSuffix>search</mat-icon>
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
