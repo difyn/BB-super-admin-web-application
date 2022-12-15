@@ -1,0 +1,75 @@
+<div class="main-outer-dashboard">
+  <div class="main-card">
+    <div class="left-slider"
+         [style]="{'width': '' + sliderLeftDivWidth + '', 'border-radius': ''+sliderLeftDivBorderRadius+''}"
+         data-aos-once="true" data-aos-duration="1000" data-aos="zoom-in">
+      <div class="left-slider-top">
+        <div class="image-logo" (click)="openLeftSlider()" [style]="{'height': ''+sliderImageLogoChangeHeight+''}">
+          <img src="{{sliderImageLogoChange}}" alt="">
+        </div>
+        <div *ngIf="sliderLeftDiv" class="location-header">
+          <h1>Global Village</h1>
+        </div>
+        <div class="navs">
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('LocationSummary')">
+            <mat-icon>dashboard</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Summary</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('LocationActivities')">
+            <mat-icon>directions_run</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Activities</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('ManageUsers')">
+            <mat-icon>person</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Users</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('ManageReports')">
+            <mat-icon>summarize</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Inspection Reports</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('OperatorDashboard')">
+            <mat-icon>dashboard_customize</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Operator Dashboard</h1>
+          </div>
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}"
+               (click)="Navigate('sales-management')">
+            <mat-icon>point_of_sale</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Sales Management</h1>
+          </div>
+        </div>
+      </div>
+      <div class="left-slider-bottom">
+        <div class="navs">
+          <!--          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}">-->
+          <!--            <mat-icon>settings</mat-icon>-->
+          <!--            <h1 *ngIf="sliderLeftDiv">Settings</h1>-->
+          <!--          </div>-->
+          <div class="nav-item" [style]="{'justify-content': ''+sliderNavAlignment+''}" (click)="Navigate('Back-to-locations')">
+            <mat-icon>arrow_back</mat-icon>
+            <h1 *ngIf="sliderLeftDiv">Back</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle-section" [style]="{'width': '' + middleSectionWidth + ''}" data-aos-once="true"
+         data-aos-duration="1000" data-aos="zoom-in">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="rightSectionHideCheck" class="right-section" [style]="{'width': '' + rightSectionWidth + ''}"
+         data-aos-once="true" data-aos-duration="1000" data-aos="zoom-in">
+      <div class="right-section-top">
+        <app-location-operator-summary></app-location-operator-summary>
+      </div>
+      <div class="right-section-bottom">
+        <app-location-activity-feed-summary></app-location-activity-feed-summary>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<p>dashboard works!</p>-->
+<!--<button (click)="onLogOut()">Log Out</button>-->

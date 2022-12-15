@@ -1,0 +1,61 @@
+<form [formGroup]="manageSettings">
+  <div class="cards">
+    <div class="row rows">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="left-hand-side">
+          <h1>PERSONAL INFO</h1>
+          <p>Update your photo and personal details</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="right-hand-side">
+          <div class="row rows">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-6">
+              <div class="MatFormField-Section">
+                <p>Username</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="username" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-6">
+              <div class="MatFormField-Section">
+                <p>Name</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="name" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-12">
+              <div class="MatFormField-Section">
+                <p>Email Address</p>
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="emailAddress" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-12">
+              <div class="image-upload">
+                <div class="image-upload-border">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="setting-buttons">
+            <div class="row rows">
+              <div class="col cols-1">
+                <button (click)="resetFormButton()" class="reset-settings" mat-flat-button color="primary">Reset
+                </button>
+              </div>
+              <div class="col cols-2">
+                <button class="save-changes-settings" mat-flat-button color="primary">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+

@@ -1,0 +1,174 @@
+.main-outer-operator-dashboard-summary {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 33px 0 0;
+}
+
+::ng-deep .mat-select-panel {
+  background: #181818 !important;
+}
+
+::ng-deep .mat-option-text {
+  color: white;
+}
+
+.mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+  background: #00B302;
+}
+
+.operator-dashboard-header {
+  display: flex;
+  flex-direction: row;
+  //border: 1px solid red;
+  height: 20%;
+  h1 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  ::ng-deep {
+    .mat-form-field {
+      width: 150px; //enter whatever width you want
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-flex {
+      padding: 0 0.75em 0 0.75em;
+      margin: 0;
+    }
+
+    .mat-form-field-flex > .mat-form-field-infix {
+      padding: 0.4em 0 !important;
+    }
+
+    .mat-form-field-label-wrapper {
+      top: -1.5em;
+    }
+
+    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+      transform: translateY(-1.1em) scale(.75);
+      width: 133.33333%;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: black;
+      font-weight: 500;
+    }
+
+    .mat-select-form-field {
+      .mat-hint, input, ::placeholder, .mat-form-field-label {
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    .mat-form-field-wrapper {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.cards{
+  height: 80%;
+  //border: 1px solid red;
+  overflow-y: auto;
+  white-space: nowrap;
+  padding: 0 5px 0 0;
+}
+.cards::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #2C2C2C;
+}
+
+.cards::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: #1C95D5;
+}
+.mat-select-form-field {
+  width: 100%;
+}
+
+.card-item {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background: rgb(0, 159, 253);
+  background: linear-gradient(90deg, rgba(0, 159, 253, 1) 0%, rgba(42, 42, 114, 1) 100%);
+  padding: 0 15px 0 15px;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: row;
+}
+.battery-cell{
+  border: 0.5px solid white;
+  width: 55px;
+  height: 50%;
+  margin: 0 10px 0 0;
+  border-radius: 5px;
+  p{
+    padding: 0 0 0 5px;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+  .battery-cell-inner{
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.card-item-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p {
+    margin: 0;
+    color: white;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    float: left;
+    display: flex;
+  }
+}
+
+.card-item-right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  span {
+    margin: 0;
+    color: white;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    float: right;
+  }
+}
+@media only screen and (max-width: 1125px) {
+  .card-item{
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .operator-dashboard-header{
+    height: 30%;
+  }
+  .cards{
+    height: 70%;
+  }
+}

@@ -1,0 +1,123 @@
+<form [formGroup]="addMonthlyReport">
+  <div class="main-outer-report-monthly">
+    <div class="report-header">
+      <h1>Semi Annual Inspection Checklist</h1>
+      <p>KNOW THE LOCATION OF THE FIRST-AID STATION, FIRE EXTINGUISHER, AND PROPER EMERGENCY PROCEDURES. ANY INCIDENT, NO MATTER HOW SMALL, MUST BE REPORTED TO THE SITE MANAGER AT ONCE.</p>
+      <div class="calender-section">
+        <mat-form-field class="mat-select-form-field" appearance="outline">
+          <mat-label>Calender</mat-label>
+          <input formControlName="calender" matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="report-body">
+      <div class="all-locations-table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell class="table-data" *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Component">
+            <th mat-header-cell *matHeaderCellDef> Component </th>
+            <td mat-cell *matCellDef="let element"> {{element.Component}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="CheckPoint">
+            <th mat-header-cell *matHeaderCellDef> Check Point </th>
+            <td mat-cell *matCellDef="let element"> {{element.CheckPoint}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Satisfaction">
+            <th mat-header-cell *matHeaderCellDef> Satisfaction </th>
+            <td mat-cell *matCellDef="let element">
+              <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="checked1" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+              </section>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="NeedsAttention">
+            <th mat-header-cell *matHeaderCellDef> Needs Attention </th>
+            <td mat-cell *matCellDef="let element">
+              <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="checked2" [ngModelOptions]="{standalone: true}"></mat-checkbox>
+              </section>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Comments">
+            <th mat-header-cell *matHeaderCellDef> Comments </th>
+            <td mat-cell *matCellDef="let element">
+              <div class="inspection-monthly-reports-field">
+                <mat-form-field class="mat-form-field-input" appearance="outline">
+                  <input formControlName="monthlyReports" matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </div>
+    </div>
+    <div class="report-footer">
+      <div class="row rows">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 cols">
+          <div class="MatFormField-Section outer-select-option">
+            <p>Inspected By :</p>
+            <mat-form-field class="mat-form-field-input" appearance="outline">
+              <input formControlName="inspectedBy" matInput placeholder="">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cols">
+          <div class="MatFormField-Section outer-select-option">
+            <p>Time :</p>
+            <mat-form-field class="mat-form-field-input" appearance="outline">
+              <input formControlName="time" matInput placeholder="">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 cols">
+          <div class="MatFormField-Section outer-select-option">
+            <p>Approved to operate By :</p>
+            <mat-form-field class="mat-form-field-input" appearance="outline">
+              <input formControlName="approvedOperate" matInput placeholder="">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cols">
+          <div class="MatFormField-Section outer-select-option">
+            <p>Remarks :</p>
+            <mat-form-field class="mat-form-field-input" appearance="outline">
+              <input formControlName="remarks" matInput placeholder="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="row rows">
+        <div class="col">
+          <div class="button-row">
+            <button (click)="cancelPopupButton()" class="close-button" mat-flat-button color="primary">Close</button>
+            <button (click)="clearForm()" class="clear-button" mat-flat-button color="primary">Clear</button>
+            <button class="add-button" mat-flat-button color="primary">Add Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
