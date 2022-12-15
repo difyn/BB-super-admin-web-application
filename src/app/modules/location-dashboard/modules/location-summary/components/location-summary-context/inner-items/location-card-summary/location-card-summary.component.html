@@ -2,9 +2,12 @@
   <div class="dashboard-summary-header">
     <div class="row rows">
       <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 cols">
-        <div class="dashboard-summary-header-left">
-          <h1>Dashboard</h1>
-          <p>Good Morning, Enoke</p>
+        <div class="location-activities-header-left">
+          <h1>Summary</h1>
+          <div>
+            <mat-icon>location_on</mat-icon>
+            <p>Global Village, Dubai</p>
+          </div>
         </div>
       </div>
       <div class="col-6 col-sm-6 col-md-8 col-lg-8 col-xl-8 cols">
@@ -23,32 +26,32 @@
     </div>
   </div>
   <div class="dashboard-summary-body">
-    <div class="filter-section">
-      <div class="row rows">
-        <div class="col cols">
-          <div class="calender-section">
-            <mat-form-field class="mat-select-form-field" appearance="outline">
-              <mat-label>Calender</mat-label>
-              <input matInput [matDatepicker]="picker">
-              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="col cols">
-          <div class="location-section">
-            <mat-form-field class="mat-select-form-field" appearance="outline">
-              <mat-label>Select Location</mat-label>
-              <mat-select>
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                  {{food.viewValue}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--    <div class="filter-section">-->
+<!--      <div class="row rows">-->
+<!--        <div class="col cols">-->
+<!--          <div class="calender-section">-->
+<!--            <mat-form-field class="mat-select-form-field" appearance="outline">-->
+<!--              <mat-label>Calender</mat-label>-->
+<!--              <input matInput [matDatepicker]="picker">-->
+<!--              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--              <mat-datepicker #picker></mat-datepicker>-->
+<!--            </mat-form-field>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col cols">-->
+<!--          <div class="location-section">-->
+<!--            <mat-form-field class="mat-select-form-field" appearance="outline">-->
+<!--              <mat-label>Select Location</mat-label>-->
+<!--              <mat-select>-->
+<!--                <mat-option *ngFor="let food of foods" [value]="food.value">-->
+<!--                  {{food.viewValue}}-->
+<!--                </mat-option>-->
+<!--              </mat-select>-->
+<!--            </mat-form-field>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <div class="summary-cards">
       <div class="row rows">
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cols">
