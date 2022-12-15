@@ -1,0 +1,90 @@
+<div class="main-outer-new-location-activity">
+    <div class="row rows">
+      <div class="col cols">
+        <div class="MatFormField-Section">
+          <p>Activity Name</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col cols">
+        <div class="select-option">
+          <p>Select Type</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <mat-select [(ngModel)]="selectedValue" name="food"  (selectionChange)="selectChange($event.value)">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  <div class="background-overlay" *ngIf="fixedContentDisplay">
+  <div class="row rows">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 cols">
+      <div class="MatFormField-Section outer-select-option">
+        <p>Description</p>
+        <mat-form-field class="mat-form-field-input" appearance="outline">
+          <input matInput placeholder="">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cols">
+      <div class="MatFormField-Section">
+        <p>Price</p>
+        <mat-form-field class="mat-form-field-input" appearance="outline">
+          <input matInput placeholder="">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="background-overlay" *ngIf="VariableContentDisplay">
+    <div data-aos-once="true" data-aos-duration="1000" data-aos="zoom-in" class="row rows" *ngFor="let item of itemList">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 cols">
+        <div class="MatFormField-Section outer-select-option">
+          <p>Item</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 cols">
+        <div class="MatFormField-Section outer-select-option">
+          <p>Description</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 cols">
+        <div class="MatFormField-Section">
+          <p>Price</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="add-more-button">
+      <div class="row rows">
+        <div class="col cols">
+          <div class="minimize-button">
+            <button (click)="minimizeButton()" mat-flat-button color="primary">-</button>
+          </div>
+        </div>
+        <div class="col cols">
+          <div class="add-more-plus-button">
+            <button (click)="addMoreButton()" mat-flat-button color="primary">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-buttons">
+    <button (click)="cancelPopupButton()" class="cancel-button" mat-flat-button color="primary">Cancel</button>
+    <button class="add-button" mat-flat-button color="primary">Add</button>
+  </div>
+</div>

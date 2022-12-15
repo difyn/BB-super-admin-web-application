@@ -1,0 +1,29 @@
+.main-outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.home-context-content {
+  height: 100%;
+  width: 610px;
+  //border: 1px solid red;
+  padding: 15px 0 15px 0;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.dashboard-top-section {
+  height: 55%;
+  //border: 1px solid red;
+}
+
+.dashboard-bottom-section {
+  height: 45%;
+  //border: 1px solid red;
+}
+

@@ -1,0 +1,85 @@
+<form [formGroup]="addUserForm">
+  <div class="main-outer-add-users">
+    <h1>New User ?</h1>
+    <div class="row rows">
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="location-section">
+          <p>Responsibility</p>
+          <mat-form-field class="mat-select-form-field" appearance="outline">
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="MatFormField-Section">
+          <p>Full Name</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="fullName" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="MatFormField-Section">
+          <p>Email</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="email" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Phone Number</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="phoneNumber" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Username</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="username" matInput placeholder="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Password</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="MatFormField-Section">
+          <p>Re enter Password</p>
+          <mat-form-field class="mat-form-field-input" appearance="outline">
+            <input formControlName="reenterPassword" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row rows">
+        <div class="col">
+          <div class="button-row">
+            <button (click)="cancelPopupButton()" class="close-button" mat-flat-button color="primary">Close</button>
+            <button (click)="clearForm()" class="clear-button" mat-flat-button color="primary">Clear</button>
+            <button class="add-button" mat-flat-button color="primary">+ Add User</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+

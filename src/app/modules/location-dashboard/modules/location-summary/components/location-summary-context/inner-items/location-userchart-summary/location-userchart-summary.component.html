@@ -1,0 +1,47 @@
+<div class="main-outer-user-chart-dashboard">
+  <div class="user-chart-dashboard-header">
+    <div class="row rows">
+      <div class="col">
+        <div class="left-side-header">
+          <h1>Users in the last week</h1>
+          <p>+ 3.2%</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="right-side-header">
+          <!--          <div class="location-section">-->
+          <!--            <mat-form-field class="mat-select-form-field" appearance="outline">-->
+          <!--              <mat-label>Select Location</mat-label>-->
+          <!--              <mat-select>-->
+          <!--                <mat-option *ngFor="let food of foods" [value]="food.value">-->
+          <!--                  {{food.viewValue}}-->
+          <!--                </mat-option>-->
+          <!--              </mat-select>-->
+          <!--            </mat-form-field>-->
+          <!--          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div #containerRef class="user-chart-dashboard-body">
+    <ngx-charts-bar-vertical
+      [results]="productSales"
+      [view]="[containerRef.offsetWidth,containerRef.offsetHeight]"
+      [scheme]="colorScheme"
+      [schemeType]="schemeType"
+      [gradient]="gradient"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [legend]="legend"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [animations]="animations"
+      [showGridLines]="showGridlines"
+      [showDataLabel]="showDataLabel"
+      [barPadding]="barPadding"
+      [tooltipDisabled]="tooltipDisable"
+      [roundEdges]="roundEdges"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+</div>
